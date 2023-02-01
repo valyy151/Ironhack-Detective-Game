@@ -195,14 +195,24 @@ let rooms = [
   patio,
 ];
 
+// return `The murderer is ${suspects[suspect].name}, ${suspects[suspect].occupation} aged ${suspects[suspect].age}.
+//   ${suspects[suspect].description}
+//   ${weapons[weapon].name} was the murderers weapon of choice weighing ${weapons[weapon].weight} pounds.
+//   The murder took place in the ${rooms[room].name}.`;
+
 function revealSuspect() {
-  let suspect = Math.floor(Math.random() * suspects.length);
-  let weapon = Math.floor(Math.random() * weapons.length);
-  let room = Math.floor(Math.random() * rooms.length);
-  return `The murderer is ${suspects[suspect].name}, ${suspects[suspect].occupation} aged ${suspects[suspect].age}.
-    ${suspects[suspect].description} 
-    ${weapons[weapon].name} was the murderers weapon of choice weighing ${weapons[weapon].weight} pounds. 
-    The murder took place in the ${rooms[room].name}.`;
+  let number = 0;
+  if (number === 0) {
+    number++;
+    let suspect = Math.floor(Math.random() * suspects.length);
+    let weapon = Math.floor(Math.random() * weapons.length);
+    let room = Math.floor(Math.random() * rooms.length);
+    return (murderer = {
+      name: suspects[suspect].name,
+      weapon: weapons[weapon].name,
+      room: rooms[room].name,
+    });
+  } else return;
 }
 
 let suspectsDiv = document.getElementById("suspects");
