@@ -1,11 +1,11 @@
-section {
+/* section {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
+} */
 
 h1, h2 {
-    margin: 40px auto;
+    margin: 20px auto;
     text-align: center;
 }
 
@@ -15,7 +15,7 @@ h2 {
 }
 
 h1{
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 
 li{
@@ -61,8 +61,24 @@ header {
 }
 
 #suspects, #weapons, #rooms {
-    background-color: rgb(231, 231, 231);
+    background-color: rgb(255, 109, 89);
     border: 1px solid black;
     padding: 10px 50px;
     line-height: 2em;
+}
+
+#forms {
+    display: flex;
+    background-color: rgb(111, 255, 255);
+    height: 100px;
+    justify-content:space-evenly
+}
+
+#forms  div {
+    background-color: rgb(78, 78, 255);
+    padding: 10px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
