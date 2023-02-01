@@ -199,17 +199,15 @@ function revealSuspect() {
   let suspect = Math.floor(Math.random() * suspects.length);
   let weapon = Math.floor(Math.random() * weapons.length);
   let room = Math.floor(Math.random() * rooms.length);
-  return console.log(
-    `The murderer is ${suspects[suspect].name}, ${suspects[suspect].occupation} aged ${suspects[suspect].age}.
+  return `The murderer is ${suspects[suspect].name}, ${suspects[suspect].occupation} aged ${suspects[suspect].age}.
     ${suspects[suspect].description} 
     ${weapons[weapon].name} was the murderers weapon of choice weighing ${weapons[weapon].weight} pounds. 
-    The murder took place in the ${rooms[room].name}.`
-  );
+    The murder took place in the ${rooms[room].name}.`;
 }
 
-let suspectsDiv = document.querySelectorAll("div")[0];
-let weaponsDiv = document.querySelectorAll("div")[1];
-let roomsDiv = document.querySelectorAll("div")[2];
+let suspectsDiv = document.getElementById("suspects");
+let weaponsDiv = document.getElementById("weapons");
+let roomsDiv = document.getElementById("rooms");
 
 function showSuspects() {
   suspects.forEach((element) => {
@@ -238,3 +236,11 @@ function showInfo() {
   setTimeout(showWeapons, 1500);
   setTimeout(showRooms, 2500);
 }
+
+let h = 0;
+show.addEventListener("click", () => {
+  if (h < 1) {
+    showInfo();
+    h = h + 1;
+  } else return;
+});
